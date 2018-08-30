@@ -92,3 +92,12 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+source ~/.bash_aliases
+
+if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+	source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
+fi
+
+source ~/.bin/tmuxinator.zsh
+
