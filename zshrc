@@ -72,11 +72,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='vim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -99,5 +99,8 @@ if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline
 	source /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
 
-source ~/.bin/tmuxinator.zsh
+#source ~/.bin/tmuxinator.zsh
+GOPATH=~/go
+GOROOT=/opt/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
