@@ -58,9 +58,12 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  git zsh-autosuggestions
-)
+plugins=(zsh-autosuggestions git tmux vi-mode svn sdk)
+
+# Fix nvm to work with zsh
+export NVM_DIR="~/.nvm"
+source ~/.nvm/nvm.sh
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,3 +107,13 @@ GOPATH=~/go
 GOROOT=/opt/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
+GOPATH=~/go
+GOROOT=/opt/go
+export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
+
+
+
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="/home/nasmajoh/.sdkman"
+[[ -s "/home/nasmajoh/.sdkman/bin/sdkman-init.sh" ]] && source "/home/nasmajoh/.sdkman/bin/sdkman-init.sh"

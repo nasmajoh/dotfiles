@@ -14,6 +14,7 @@ endif
 
 set background=dark
 set nowrap
+" set highlight LineNr guibg=DimGray
 
 let mapleader = ","
 
