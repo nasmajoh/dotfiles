@@ -1,8 +1,11 @@
+# Start tmux
+if [ "$TMUX" = "" ]; then tmux; fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-  export ZSH=/home/nasmajoh/.oh-my-zsh
+export ZSH=/home/nasmajoh/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -61,9 +64,8 @@ ZSH_THEME="agnoster"
 plugins=(zsh-autosuggestions git tmux vi-mode svn sdk)
 
 # Fix nvm to work with zsh
-export NVM_DIR="~/.nvm"
-source ~/.nvm/nvm.sh
-
+export NVM_DIR="$HOME/.nvm"
+source $HOME/.nvm/nvm.sh
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,16 +105,10 @@ if [[ -r /usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline
 fi
 
 #source ~/.bin/tmuxinator.zsh
-GOPATH=~/go
-GOROOT=/opt/go
-export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
 
 GOPATH=~/go
 GOROOT=/opt/go
 export PATH=$PATH:$GOPATH/bin:$GOROOT/bin
-
-
-
 
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/home/nasmajoh/.sdkman"
